@@ -2,7 +2,7 @@
 <html> 
 <head  lang = "en"> 
     <meta  charset = "UTF-8"> 
-    <title>Certificate - {{name}}</title> 
+    <title>Certificate - {{ name }}</title> 
     <style lang="css">
         .align-center {
             display: grid;
@@ -11,7 +11,8 @@
             justify-items: center;
         }
         body {
-            background-image: url('assets/images/background.png');
+            /* background-image: url('assets/images/background.png'); */
+            background-image: url('https://github.com/ThazSobral/certificate-generator/blob/main/assets/images/background.png?raw=true');
             background-repeat: no-repeat;
             background-size: cover;
             /* background-attachment: fixed; */
@@ -52,20 +53,21 @@
             </p>
             <br>
             <p class="certificate-body align-center">
-                {{name}}
+                {{ name }}
             </p>
             <br>
             <p class="certificate-body align-center">
-                Concluiu com êxito o curso de {{course}}, com início em {{date}} e com carga horária de {{hours}} horas.
+                Concluiu com êxito o curso de {{ course }}, com início em {{ date }} e com carga horária de {{ hours }} horas.
             </p>
             <div id="assignature" class="align-center">
-                <img id="assignature-responsible" src="assets/images/ri_2.png"/>
+                <!-- <img id="assignature-responsible" src="assets/images/ri_2.png"/> -->
+                <img id="assignature-responsible" src="https://github.com/ThazSobral/certificate-generator/blob/main/assets/images/ri_2.png?raw=true"/>
             </div>
             <p class="align-center">
-                {{resposible_name}}
+                {{ resposible_name }}
             </p>
             <p class="align-center">
-                {{school_name}}
+                {{ school_name }}
             </p>
         </div>
     </div>
