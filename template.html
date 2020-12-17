@@ -28,7 +28,7 @@
             margin: 1vh;
             /* border: double #393B3B; */
         }
-        body > #certificate-border > #container > #certificate-body {
+        body > #certificate-border > #container > .certificate-body {
             text-align: center;
         }
         body > #certificate-border > #container > #assignature {
@@ -44,18 +44,18 @@
 <body>
     <div id="certificate-border" class="box">
         <div id="container" class="align-center">
-            <h1 class="align-center">
+            <h1 id="title-cetificate" class="align-center">
                 Certificado
             </h1>
-            <p class="align-center">
+            <p class="certificate-body align-center">
                 Certificado para os devidos fins que
             </p>
             <br>
-            <p class="align-center">
+            <p class="certificate-body align-center">
                 {{name}}
             </p>
             <br>
-            <p id="certificate-body" class="align-center">
+            <p class="certificate-body align-center">
                 Concluiu com êxito o curso de {{course}}, com início em {{date}} e com carga horária de {{hours}} horas.
             </p>
             <div id="assignature" class="align-center">
