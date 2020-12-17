@@ -7,41 +7,67 @@
         .align-center {
             display: grid;
             justify-content: center;
+            align-items: center;
+            justify-items: center;
         }
         body {
-            background-image: url("https://static.wixstatic.com/media/7f7d18_98faa47a6f21441e9e5048696ad1336d.jpg/v1/fill/w_483,h_683,al_c,q_90,usm_0.66_1.00_0.01/7f7d18_98faa47a6f21441e9e5048696ad1336d.webp");
-            background-repeat: "no-repeat";
-            /* background-size: cover; */
+            background-image: url('assets/images/background.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-attachment: fixed; */
+            background-position: auto;
+            -webkit-print-color-adjust: exact;
         }
         body > #certificate-border {
-            height: 90vh;
-            /* width: 100%; */
-            /* padding: 2%; */
-            margin: 1% 10%;
-            border: double #393B3B;
+            height: 95vh;
+            /* border: solid 1px #393B3B; */
+        }
+        body > #certificate-border > #container {
+            height: 95vh;
+            padding: 0 5vh;
+            margin: 1vh;
+            /* border: double #393B3B; */
+        }
+        body > #certificate-border > #container > #certificate-body {
+            text-align: center;
+        }
+        body > #certificate-border > #container > #assignature {
+            width: 50vh;
+            display: grid;
+            border-bottom: solid 2px;
+        }
+        body > #certificate-border > #container > #assignature > #assignature-responsible {
+            margin-bottom: -20px;
         }
     </style>
 </head> 
 <body>
-    <div class="box"></div>
-    <div class="sub-box"></div>
-    <div id="certificate-border" class="align-center">
-        <img src="logo">
-        <br>
-        <h1 class="align-center"> Certificado </h1>
-        <p class="align-center">Certificado para os devidos fins que</p>
-        <br>
-        <p class="align-center">{{name}}</p>
-        <br>
-        <p class="align-center">
-            Concluiu com êxito o curso de {{course}}, com início em {{date}} e com carga horária de {{hours}} horas.
-        </p>
-        <img id="assignature-responsible"/>
-        <br>
-        <p class="align-center">{{resposible_name}}</p>
-        <p class="align-center">{{school_name}}</p>
+    <div id="certificate-border" class="box">
+        <div id="container" class="align-center">
+            <h1 class="align-center">
+                Certificado
+            </h1>
+            <p class="align-center">
+                Certificado para os devidos fins que
+            </p>
+            <br>
+            <p class="align-center">
+                {{name}}
+            </p>
+            <br>
+            <p id="certificate-body" class="align-center">
+                Concluiu com êxito o curso de {{course}}, com início em {{date}} e com carga horária de {{hours}} horas.
+            </p>
+            <div id="assignature" class="align-center">
+                <img id="assignature-responsible" src="assets/images/ri_2.png"/>
+            </div>
+            <p class="align-center">
+                {{resposible_name}}
+            </p>
+            <p class="align-center">
+                {{school_name}}
+            </p>
+        </div>
     </div>
-    <div class="sub-box"></div>
-    <div class="box"></div>
 </body>
 </html>
