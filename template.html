@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html> 
+<head  lang = "en"> 
+    <meta  charset = "UTF-8"> 
+    <title>Certificate - {{name}}</title> 
+    <style lang="css">
+        .align-center {
+            display: grid;
+            justify-content: center;
+        }
+        body {
+            background-image: url("https://static.wixstatic.com/media/7f7d18_98faa47a6f21441e9e5048696ad1336d.jpg/v1/fill/w_483,h_683,al_c,q_90,usm_0.66_1.00_0.01/7f7d18_98faa47a6f21441e9e5048696ad1336d.webp");
+            background-repeat: "no-repeat";
+            /* background-size: cover; */
+        }
+        body > #certificate-border {
+            height: 90vh;
+            /* width: 100%; */
+            /* padding: 2%; */
+            margin: 1% 10%;
+            border: double #393B3B;
+        }
+    </style>
+</head> 
+<body>
+    <div class="box"></div>
+    <div class="sub-box"></div>
+    <div id="certificate-border" class="align-center">
+        <img src="logo">
+        <br>
+        <h1 class="align-center"> Certificado </h1>
+        <p class="align-center">Certificado para os devidos fins que</p>
+        <br>
+        <p class="align-center">{{name}}</p>
+        <br>
+        <p class="align-center">
+            Concluiu com êxito o curso de {{course}}, com início em {{date}} e com carga horária de {{hours}} horas.
+        </p>
+        <img id="assignature-responsible"/>
+        <br>
+        <p class="align-center">{{resposible_name}}</p>
+        <p class="align-center">{{school_name}}</p>
+    </div>
+    <div class="sub-box"></div>
+    <div class="box"></div>
+</body>
+</html>
