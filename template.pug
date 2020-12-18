@@ -1,0 +1,60 @@
+doctype html
+head(lang='en')
+  meta(charset='UTF-8')
+  title Certificate - {{ name }}
+  style(lang='css').
+    .align-center {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    }
+    body {
+    /* background-image: url('assets/images/background.png'); */
+    background-image: url('https://github.com/ThazSobral/certificate-generator/blob/main/assets/images/background.png?raw=true');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-position: auto;
+    -webkit-print-color-adjust: exact;
+    }
+    body > #certificate-border {
+    height: 95vh;
+    /* border: solid 1px #393B3B; */
+    }
+    body > #certificate-border > #container {
+    height: 95vh;
+    padding: 0 5vh;
+    margin: 1vh;
+    /* border: double #393B3B; */
+    }
+    body > #certificate-border > #container > .certificate-body {
+    text-align: center;
+    }
+    body > #certificate-border > #container > #assignature {
+    width: 50vh;
+    display: grid;
+    border-bottom: solid 2px;
+    }
+    body > #certificate-border > #container > #assignature > #assignature-responsible {
+    margin-bottom: -20px;
+    }
+#certificate-border.box
+  #container.align-center
+    h1#title-cetificate.align-center
+      | Certificado
+    p.certificate-body.align-center
+      | Certificado para os devidos fins que
+    br
+    p.certificate-body.align-center
+      | {{ name }}
+    br
+    p.certificate-body.align-center
+      | Concluiu com &ecirc;xito o curso de {{ course }}, com in&iacute;cio em {{ date }} e com carga hor&aacute;ria de {{ hours }} horas.
+    #assignature.align-center
+      // <img id="assignature-responsible" src="assets/images/ri_2.png"/>
+      img#assignature-responsible(src='https://github.com/ThazSobral/certificate-generator/blob/main/assets/images/ri_2.png?raw=true')
+    p.align-center
+      | {{ responsible_name }}
+    p.align-center
+      | {{ school_name }}
