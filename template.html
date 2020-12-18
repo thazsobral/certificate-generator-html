@@ -4,72 +4,63 @@
     <meta  charset = "UTF-8"> 
     <title>Certificate - {{ name }}</title> 
     <style lang="css">
-        .align-center {
-            display: grid;
-            justify-content: center;
-            align-items: center;
-            justify-items: center;
-        }
         body {
-            /* background-image: url('assets/images/background.png'); */
             background-image: url('https://github.com/ThazSobral/certificate-generator/blob/main/assets/images/background.png?raw=true');
             background-repeat: no-repeat;
             background-size: cover;
-            /* background-attachment: fixed; */
-            background-position: auto;
-            -webkit-print-color-adjust: exact;
+           
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        body > #certificate-border {
-            height: 95vh;
-            /* border: solid 1px #393B3B; */
-        }
-        body > #certificate-border > #container {
-            height: 95vh;
-            padding: 0 5vh;
-            margin: 1vh;
-            /* border: double #393B3B; */
-        }
-        body > #certificate-border > #container > .certificate-body {
+        h1, h2, p{
             text-align: center;
         }
-        body > #certificate-border > #container > #assignature {
-            width: 50vh;
-            display: grid;
+        p {
+            width: 100vh;
+        }
+        #container {
+            /* display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; */
+        }
+        #assignature {
             border-bottom: solid 2px;
         }
-        body > #certificate-border > #container > #assignature > #assignature-responsible {
+        #assignature-responsible {
             margin-bottom: -20px;
         }
     </style>
 </head> 
 <body>
-    <div id="certificate-border" class="box">
-        <div id="container" class="align-center">
-            <h1 id="title-cetificate" class="align-center">
-                Certificado
-            </h1>
-            <p class="certificate-body align-center">
+    <div>
+        <h1>
+            Certificado
+        </h1>
+        <div>
+            <p>
                 Certificado para os devidos fins que
             </p>
-            <br>
-            <p class="certificate-body align-center">
-                {{ name }}
-            </p>
-            <br>
-            <p class="certificate-body align-center">
-                Concluiu com êxito o curso de {{ course }}, com início em {{ date }} e com carga horária de {{ hours }} horas.
-            </p>
-            <div id="assignature" class="align-center">
-                <!-- <img id="assignature-responsible" src="assets/images/ri_2.png"/> -->
-                <img id="assignature-responsible" src="https://github.com/ThazSobral/certificate-generator/blob/main/assets/images/ri_2.png?raw=true"/>
-            </div>
-            <p class="align-center">
-                {{ responsible_name }}
-            </p>
-            <p class="align-center">
-                {{ school_name }}
+        </div>
+        <h2>
+            {{ name }}
+        </h2>
+        <div>
+            <p>
+                Concluiu com êxito o curso de {{ course }}, com conclusão em {{ date }} e com carga horária de {{ hours }} horas.
             </p>
         </div>
+        <div id="assignature">
+            <img id="assignature-responsible" src="https://github.com/ThazSobral/certificate-generator/blob/main/assets/images/ri_2.png?raw=true"/>
+        </div>
+        <p>
+            {{ responsible_name }}
+        </p>
+        <p>
+            {{ school_name }}
+        </p>
     </div>
 </body>
 </html>
