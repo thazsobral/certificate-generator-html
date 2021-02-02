@@ -5,4 +5,4 @@ Como exemplo de produção foi utilizado um [template](https://github.com/ThazSo
 
 - [Exemplo](https://github.com/ThazSobral/certificate-generator/blob/main/example-pdf/certificate-example.pdf) de certificado gerado pelo script.
 
->*Critícas e sugestões são sempre bem vindas. Para isso abra uma issue.*
+*Para critícas e sugestões abra uma issue. Obrigado* :+1:
